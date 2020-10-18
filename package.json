@@ -2,9 +2,10 @@
   "name": "korn-node-1.0",
   "version": "1.0.0",
   "description": "The first official Kornetzke Bros. collab",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startdev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/patrickkornetzke/korn-node-1.0#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
   }
 }
