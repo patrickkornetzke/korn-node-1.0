@@ -2,12 +2,17 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/richard', (req, res) => {
-    res.send('Hello World richard 2!')
+app.set('view engine', 'pug')
+app.use(express.static('public'))
+
+app.get('/jjj:username', (req, res) => {
+    res.send(app.settings)
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/user/:username', (req, res) => {
+    const username = req.params.username
+    res.locals.username = username
+    res.render('index', {'data':'test'})
 })
 
 app.listen(port, () => {
